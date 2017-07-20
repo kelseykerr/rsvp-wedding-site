@@ -1,0 +1,65 @@
+<div class="width-400" ng-if="rsvp.showLogin">
+  <form ng-submit="rsvp.doLogin()" class="form">
+    <div class="">
+      <div class="form-group">
+        <input type="text" class="form-control bottom-only" ng-model="rsvp.username" placeholder="username" required="" />
+      </div>
+
+      <div class="form-group">
+        <input type="password" class="form-control bottom-only" ng-model="rsvp.password" placeholder="password" required="" />
+      </div>
+
+      <div class="form-group">
+        <a href="" ng-click="rsvp.doLogin()" class="btn float-right">get my invitation</a>
+        <span class="text-danger">{{ error }}</span>
+      </div>
+
+    </div>
+  </form>
+</div>
+
+<div class="center-section" ng-if="!rsvp.showLogin">
+  <form name="rsvpForm">
+    <h2>Guests</h2>
+    <ul class="rsvp-list">
+      <li class="margin-bottom-20 margin-top-25 height-20 width-700" ng-repeat="guest in rsvp.invitation.guests">
+        <span class="float-left">{{rsvp.getGuestName(guest)}}</span>
+        <select class="float-right margin-end-30 rsvp-dropdown" name="rsvpSelect" ng-model="guest.attending" required>
+      <option value=true>Hell yes I'm coming!</option>
+      <option value=false>Regretfully/Happily decline</option>
+    </select>
+      </li>
+    </ul>
+    <ul class="rsvp-list">
+      <li class="margin-bottom-20 margin-top-25 height-20 width-700" ng-repeat="newGuest in rsvp.additionalGuests">
+        <span class="remove-guest float-left" ng-click="rsvp.removeGuest(newGuest)"><i class="fa fa-times-circle-o" aria-hidden="true"></i></span>
+        <span class="float-left width-100">
+        <div class="form-group">
+          <input type="text" class="form-control bottom-only margin-right-30" ng-model="newGuest.firstname" placeholder="firstname" required="" />
+        </div>
+      </span>
+        <span class="float-left width-100">
+        <div class="form-group">
+          <input type="text" class="form-control bottom-only margin-right-30" ng-model="newGuest.lastname" placeholder="lastname" required="" />
+        </div>
+      </span>
+        <span class="float-left width-200">
+        <div class="form-group">
+          <input type="email" class="form-control bottom-only margin-right-30" ng-model="newGuest.email" placeholder="email"/>
+        </div>
+      </span>
+        <select ng-if="rsvp.invitation.guests.length > 1" class="float-right margin-end-30 rsvp-dropdown" name="guestOf" ng-model="newGuest.guestof" required>
+        <option ng-repeat="person in rsvp.invitation.guests" value="{{person.id}}"
+   ng-selected="newGuest.guestof == person.id">Guest of {{person.firstname}}</option>
+    </select>
+      </li>
+    </ul>
+
+    <div ng-if="rsvp.canAddMoreGuests()" class="width-700 margin-top-25">
+      <a href="" ng-click="rsvp.addGuest()" class="btn float-right"><span class="add-icon"><i class="fa fa-plus-circle" aria-hidden="true"></i></span> Add Guest ({{rsvp.invitation.additionalGuests - rsvp.additionalGuests.length}})</a>
+    </div>
+    <div class="margin-top-25 col-md-12">
+      <a href="" ng-click="!rsvpForm.$valid || rsvp.submitRsvp()" class="btn" ng-disabled="!rsvpForm.$valid">Submit</a>
+    </div>
+  </form>
+</div>
