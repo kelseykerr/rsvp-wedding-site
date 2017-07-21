@@ -6,6 +6,8 @@ angular.module('kevKelseyWedApp')
     $scope.rsvp = {
       showLogin: false,
 
+      showReceived: false,
+
       username: '',
 
       password: '',
@@ -28,7 +30,7 @@ angular.module('kevKelseyWedApp')
         var newGuest = {
           firstname: "",
           lastname: "",
-          guestof: $scope.rsvp.invitation.guests[0].id,
+          guestOf: $scope.rsvp.invitation.guests[0].id,
           email: "",
           attending: true
         }
@@ -49,8 +51,8 @@ angular.module('kevKelseyWedApp')
           $scope.rsvp.invitation.guests.push($scope.rsvp.additionalGuests[i]);
         }
         for (var i = 0; i < $scope.rsvp.invitation.guests.length; i++) {
-          if ($scope.rsvp.invitation.guests[i].guestof != undefined) {
-            $scope.rsvp.invitation.guests[i].guestof = parseInt($scope.rsvp.invitation.guests[i].guestof);
+          if ($scope.rsvp.invitation.guests[i].guestOf != undefined) {
+            $scope.rsvp.invitation.guests[i].guestOf = parseInt($scope.rsvp.invitation.guests[i].guestOf);
           }
           if ($scope.rsvp.invitation.guests[i].attending === 'true') {
             $scope.rsvp.invitation.guests[i].attending = true;
@@ -60,7 +62,12 @@ angular.module('kevKelseyWedApp')
         }
         RsvpService.updateInvitation($scope.rsvp.invitation)
           .then(function(resp) {
-
+            $scope.rsvp.showReceived = true;
+          }, function(error) {
+            console.log(error);
+            if (error.status == 401) {
+              $scope.rsvp.showLogin = true;
+            }
           })
 
       },
@@ -83,6 +90,11 @@ angular.module('kevKelseyWedApp')
             } else {
               $scope.rsvp.invitation.guests[i].attending = 'false';
             }
+          }
+        }, function(error) {
+          console.log(error);
+          if (error.status == 401) {
+            $scope.rsvp.showLogin = true;
           }
         });
       },

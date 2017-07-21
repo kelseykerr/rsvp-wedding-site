@@ -1,723 +1,835 @@
-@font-face {
-  font-family: Ailerons;
-  src: url('../fonts/Ailerons-Typeface.otf') format('opentype');
-}
-
-@font-face {
-  font-family: DarkRoast;
-  src: url('../fonts/Dark-Roast.ttf') format('opentype');
-}
-
-.navbar-default {
-  background-color: #F3F3F3 !important;
-  border-color: transparent !important;
-}
-
-@media (min-width: 768px) {
-  .navbar {
-    border-radius: 0px !important;
+  @font-face {
+    font-family: Ailerons;
+    src: url('../fonts/Ailerons-Typeface.otf') format('opentype');
   }
+
+  @font-face {
+    font-family: DarkRoast;
+    src: url('../fonts/Dark-Roast.ttf') format('opentype');
+  }
+
   .navbar-default {
-    background-color: #FFFFFF !important;
-    border-color: #e7e7e7 !important;
+    background-color: #F3F3F3 !important;
+    border-color: transparent !important;
   }
-}
 
-.navbar-default .navbar-nav>li>a {
-  font-family: 'Spinnaker', sans-serif;
-  color: rgba(24, 106, 59, 0.7) !important;
-  font-size: 15px;
-}
-
-.center-img {
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  max-width: 100%;
-}
-
-.margin-top-25 {
-  margin-top: 25px;
-}
-
-.section-header {
-  text-align: center;
-  margin-top: 100px;
-  margin-bottom: 100px;
-  font-size: 24px;
-  color: #777;
-  font-family: 'Spinnaker', sans-serif;
-}
-
-.img-circle {
-  border-radius: 50%;
-}
-
-.couple-img {
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  max-width: 330px;
-  width: 100%;
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-
-#clockdiv {
-  font-family: sans-serif;
-  color: #fff;
-  display: inline-block;
-  padding: 0 0 20px 0;
-  font-weight: 100;
-  text-align: center;
-  font-size: 30px;
-  width: 100%;
-}
-
-#clockdiv>div {
-  padding: 15px 10px;
-  border-radius: 3px;
-  display: inline-block;
-  border: solid;
-  border-width: 2px;
-  -webkit-border-image: url(../images/gold-texture.jpg) 50 round;
-  /* Safari 3.1-5 */
-  -o-border-image: url(../images/gold-texture.jpg) 50 round;
-  /* Opera 11-12.1 */
-  border-image: url(../images/gold-texture.jpg) 50 round;
-}
-
-#clockdiv div>span {
-  padding: 0 10px;
-  border-radius: 3px;
-  color: rgba(24, 106, 59, 0.7);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text !important;
-  background: url(../images/small_gold.jpg);
-  font-family: 'Spinnaker', sans-serif;
-  display: inline-block;
-}
-
-.smalltext {
-  padding-top: 5px;
-  font-size: 12px;
-  font-weight: bold;
-  font-family: 'Spinnaker', sans-serif;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text !important;
-  background: url(../images/small_gold.jpg);
-  color: rgba(24, 106, 59, 0.7);
-}
-
-.hotel-block {
-  font-family: sans-serif;
-  display: inline-block;
-  padding: 0 0 20px 0;
-  font-weight: 100;
-  text-align: center;
-  font-size: 30px;
-  width: 100%;
-}
-
-.hotel-block>div {
-  max-width: 320px;
-}
-
-.hotel-block>div {
-  padding: 15px 15px;
-  border-radius: 3px;
-  display: inline-block;
-  border: solid;
-  border-width: 2px;
-  margin-right: 20px;
-  margin-left: 20px;
-  margin-bottom: 20px;
-  border-color: rgba(24, 106, 59, 0.7);
-}
-
-.bigger-text {
-  padding-top: 5px;
-  font-size: 20px;
-  font-family: 'Spinnaker', sans-serif;
-  color: rgba(24, 106, 59, 0.7);
-}
-
-.wedding-text {
-  font-size: 18px;
-  margin-bottom: 20px;
-  color: rgba(24, 106, 59, 0.7);
-  font-family: 'Spinnaker', sans-serif;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text !important;
-  background: url(../images/small_gold.jpg);
-  color: rgba(24, 106, 59, 0.7);
-}
-
-.small-text {
-  padding-top: 5px;
-  font-size: 12px;
-  font-family: 'Spinnaker', sans-serif;
-  color: rgba(24, 106, 59, 0.7);
-}
-
-.text {
-  padding-top: 5px;
-  font-size: 16px;
-  font-family: 'Spinnaker', sans-serif;
-  color: rgba(24, 106, 59, 0.7);
-}
-
-.hotel-img {
-  width: 270px;
-  height: 170px;
-}
-
-.registry-img {
-  width: 200px;
-  max-height: 200px;
-}
-
-.center-content {
-  text-align: center;
-}
-
-.btn {
-  color: rgba(24, 106, 59, 0.7);
-  border: 1px solid rgba(24, 106, 59, 0.7) !important;
-}
-
-.float-right {
-  float: right;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.float-left {
-  float: left;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.btn-disabled {
-  cursor: not-allowed !important;
-  filter: alpha(opacity=65);
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  opacity: .65;
-}
-
-#map {
-  height: 400px;
-  max-width: 100%;
-}
-
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
-
-body {
-  padding: 0;
-  background-color: #f3f3f3 !important;
-}
-
-
-/* Everything but the jumbotron gets side spacing for mobile first views */
-
-.header, .marketing, .footer {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.header {
-  position: fixed;
-  width: 100%;
-  z-index: 100;
-}
-
-
-/* Make the masthead heading the same height as the navigation */
-
-.header h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 40px;
-  padding-bottom: 19px;
-}
-
-
-/* Custom page footer */
-
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
-  margin-top: 20px;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 60px;
-  /* Height of the footer */
-}
-
-.bottom-only {
-  border: 0 !important;
-  background-color: #f3f3f3 !important;
-  border-bottom: 1px solid rgba(24, 106, 59, 0.7) !important;
-  border-radius: 0px !important;
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important;
-  outline: 0;
-}
-
-.margin-right-30 {
-  margin-right: 30px;
-}
-
-.container-narrow>hr {
-  margin: 30px 0;
-}
-
-
-/* Main marketing message and sign up button */
-
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.jumbotron .btn {
-  font-size: 21px;
-  padding: 14px 24px;
-}
-
-
-/* Supporting marketing content */
-
-.marketing {
-  margin: 40px 0;
-}
-
-.marketing p+h4 {
-  margin-top: 28px;
-}
-
-
-/* Responsive: Portrait tablets and up */
-
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
+  @media (min-width: 768px) {
+    .navbar {
+      border-radius: 0px !important;
+    }
+    .navbar-default {
+      background-color: #FFFFFF !important;
+      border-color: #e7e7e7 !important;
+    }
   }
-  /* Remove the padding we set earlier */
+
+  .navbar-default .navbar-nav>li>a {
+    font-family: 'Spinnaker', sans-serif;
+    color: rgba(24, 106, 59, 0.7) !important;
+    font-size: 15px;
+  }
+
+  .center-img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-width: 100%;
+  }
+
+  .margin-top-25 {
+    margin-top: 25px;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    font-size: 24px;
+    color: #777;
+    font-family: 'Spinnaker', sans-serif;
+  }
+
+  .img-circle {
+    border-radius: 50%;
+  }
+
+  .couple-img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-width: 330px;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  #clockdiv {
+    font-family: sans-serif;
+    color: #fff;
+    display: inline-block;
+    padding: 0 0 20px 0;
+    font-weight: 100;
+    text-align: center;
+    font-size: 30px;
+    width: 100%;
+  }
+
+  #clockdiv>div {
+    padding: 15px 10px;
+    border-radius: 3px;
+    display: inline-block;
+    border: solid;
+    border-width: 2px;
+    -webkit-border-image: url(../images/gold-texture.jpg) 50 round;
+    /* Safari 3.1-5 */
+    -o-border-image: url(../images/gold-texture.jpg) 50 round;
+    /* Opera 11-12.1 */
+    border-image: url(../images/gold-texture.jpg) 50 round;
+  }
+
+  #clockdiv div>span {
+    padding: 0 10px;
+    border-radius: 3px;
+    color: rgba(24, 106, 59, 0.7);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text !important;
+    background: url(../images/small_gold.jpg);
+    font-family: 'Spinnaker', sans-serif;
+    display: inline-block;
+  }
+
+  .smalltext {
+    padding-top: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Spinnaker', sans-serif;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text !important;
+    background: url(../images/small_gold.jpg);
+    color: rgba(24, 106, 59, 0.7);
+  }
+
+  .hotel-block {
+    font-family: sans-serif;
+    display: inline-block;
+    padding: 0 0 20px 0;
+    font-weight: 100;
+    text-align: center;
+    font-size: 30px;
+    width: 100%;
+  }
+
+  .hotel-block>div {
+    max-width: 320px;
+  }
+
+  .hotel-block>div {
+    padding: 15px 15px;
+    border-radius: 3px;
+    display: inline-block;
+    border: solid;
+    border-width: 2px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border-color: rgba(24, 106, 59, 0.7);
+  }
+
+  .green-text {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 16px;
+    font-family: 'Spinnaker', sans-serif;
+    color: rgba(24, 106, 59, 0.7);
+  }
+
+  .rsvp-received {
+    width: 100vw;
+    height: 100vh;
+    vertical-align: middle;
+    text-align: center;
+    display: table-cell;
+    background: white;
+  }
+
+  .size-50 {
+    font-size: 50px;
+  }
+
+  .rsvp-received>p {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 20px;
+    font-family: 'Spinnaker', sans-serif;
+    color: rgba(24, 106, 59, 0.7);
+  }
+
+  .bigger-text {
+    padding-top: 5px;
+    font-size: 20px;
+    font-family: 'Spinnaker', sans-serif;
+    color: rgba(24, 106, 59, 0.7);
+  }
+
+  .wedding-text {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: rgba(24, 106, 59, 0.7);
+    font-family: 'Spinnaker', sans-serif;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text !important;
+    background: url(../images/small_gold.jpg);
+    color: rgba(24, 106, 59, 0.7);
+  }
+
+  .rsvp-section {
+    font-family: 'Spinnaker', sans-serif;
+  }
+
+  .rsvpForm {
+    padding-top: 50px;
+  }
+
+  .font-size-18 {
+    font-size: 18px;
+  }
+
+  .small-text {
+    padding-top: 5px;
+    font-size: 12px;
+    font-family: 'Spinnaker', sans-serif;
+    color: rgba(24, 106, 59, 0.7);
+  }
+
+  .text {
+    padding-top: 5px;
+    font-size: 16px;
+    font-family: 'Spinnaker', sans-serif;
+    color: rgba(24, 106, 59, 0.7);
+  }
+
+  .hotel-img {
+    width: 270px;
+    height: 170px;
+  }
+
+  .registry-img {
+    width: 200px;
+    max-height: 200px;
+  }
+
+  .center-content {
+    text-align: center;
+  }
+
+  .btn {
+    color: rgba(24, 106, 59, 0.7);
+    border: 1px solid rgba(24, 106, 59, 0.7) !important;
+  }
+
+  .float-right {
+    float: right;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .float-left {
+    float: left;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .btn-disabled {
+    cursor: not-allowed !important;
+    filter: alpha(opacity=65);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    opacity: .65;
+  }
+
+  #map {
+    height: 400px;
+    max-width: 100%;
+  }
+
+  .browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+  }
+
+  body {
+    padding: 0;
+    background-color: #f3f3f3 !important;
+  }
+  /* Everything but the jumbotron gets side spacing for mobile first views */
+
   .header, .marketing, .footer {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 15px;
+    padding-right: 15px;
   }
-  /* Remove the bottom border on the jumbotron for visual effect */
+
+  .header {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+  }
+  /* Make the masthead heading the same height as the navigation */
+
+  .header h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
+  }
+  /* Custom page footer */
+
+  .footer {
+    padding-top: 19px;
+    color: #777;
+    border-top: 1px solid #e5e5e5;
+    margin-top: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    /* Height of the footer */
+  }
+
+  .bottom-only {
+    border: 0 !important;
+    background-color: #f3f3f3 !important;
+    border-bottom: 1px solid rgba(24, 106, 59, 0.7) !important;
+    border-radius: 0px !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline: 0;
+  }
+
+  .margin-right-30 {
+    margin-right: 30px;
+  }
+
+  .container-narrow>hr {
+    margin: 30px 0;
+  }
+  /* Main marketing message and sign up button */
+
   .jumbotron {
-    border-bottom: 0;
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
   }
-}
 
-.navbar {
-  margin-bottom: 0px;
-}
+  .jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+  }
+  /* Supporting marketing content */
 
-.logo {
-  max-width: 870px;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  margin-bottom: 50px;
-  padding-top: 100px;
-}
+  .marketing {
+    margin: 40px 0;
+  }
 
-.banner {
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  max-width: 1000px;
-  width: 100%;
-}
+  .marketing p+h4 {
+    margin-top: 28px;
+  }
+  /* Responsive: Portrait tablets and up */
 
-.blocktext {
-  margin-top: 50px;
-  margin-bottom: 50px;
-  font-size: 18px;
-  text-align: center;
-  color: #627C69;
-}
+  @media screen and (min-width: 768px) {
+    .container {
+      max-width: 730px;
+    }
+    /* Remove the padding we set earlier */
+    .header, .marketing, .footer {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    /* Remove the bottom border on the jumbotron for visual effect */
+    .jumbotron {
+      border-bottom: 0;
+    }
+  }
 
-.margin-bottom-20 {
-  margin-bottom: 20px;
-}
+  .navbar {
+    margin-bottom: 0px;
+  }
 
-.deckgrid[deckgrid]::before {
-  /* Specifies that the grid should have a maximum of 4 columns. Each column will have the classes 'column' and 'column-1-4' */
-  content: '3 .column.column-1-3';
-  font-size: 0;
-  /* See https://github.com/akoenig/angular-deckgrid/issues/14#issuecomment-35728861 */
-  visibility: hidden;
-}
+  .logo {
+    max-width: 870px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 50px;
+    padding-top: 100px;
+  }
 
-.deckgrid {
-  margin: 20px auto;
-  width: 900px;
-}
+  .banner {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-width: 1000px;
+    width: 100%;
+  }
 
-.deckgrid .column {
-  float: left;
-}
+  .blocktext {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 18px;
+    text-align: center;
+    color: #627C69;
+  }
 
-.deckgrid .column-1-4 {
-  width: 25%;
-}
+  .margin-bottom-20 {
+    margin-bottom: 20px;
+  }
 
-.deckgrid .column-1-3 {
-  width: 33%;
-  max-width: 300px;
-}
-
-.deckgrid .column-1-2 {
-  width: 50%;
-  max-width: 300px;
-}
-
-.deckgrid .column-1-1 {
-  width: 100%;
-  max-width: 300px;
-}
-
-.a-card {
-  margin: 20px;
-}
-
-.a-card>img {
-  width: 100%;
-  max-height: 257px;
-  border-radius: 100%;
-}
-
-.a-card>div {
-  text-align: center;
-  font-family: 'Spinnaker', sans-serif;
-  font-size: 16px;
-  margin-top: 5px;
-}
-
-@media screen and (max-width: 1000px) {
   .deckgrid[deckgrid]::before {
-    content: '2 .column.column-1-2';
+    /* Specifies that the grid should have a maximum of 4 columns. Each column will have the classes 'column' and 'column-1-4' */
+    content: '3 .column.column-1-3';
+    font-size: 0;
+    /* See https://github.com/akoenig/angular-deckgrid/issues/14#issuecomment-35728861 */
+    visibility: hidden;
   }
+
   .deckgrid {
-    margin: 100px auto;
-    padding: 10px;
-    width: 600px;
+    margin: 20px auto;
+    width: 900px;
   }
-}
 
-@media screen and (max-width: 620px) {
-  .deckgrid[deckgrid]::before {
-    content: '1 .column.column-1-1';
+  .deckgrid .column {
+    float: left;
   }
-  .deckgrid {
-    margin: 100px auto;
-    padding: 10px;
-    width: 300px;
+
+  .deckgrid .column-1-4 {
+    width: 25%;
   }
-}
 
-.clearfix:before, .clearfix:after {
-  content: " ";
-  display: table;
-}
+  .deckgrid .column-1-3 {
+    width: 33%;
+    max-width: 300px;
+  }
 
-.clearfix:after {
-  clear: both;
-}
+  .deckgrid .column-1-2 {
+    width: 50%;
+    max-width: 300px;
+  }
 
-.footer {
-  text-align: center;
-  display: block;
-}
+  .deckgrid .column-1-1 {
+    width: 100%;
+    max-width: 300px;
+  }
 
-.spacer {
-  width: 100%;
-  height: 100vh;
-}
+  .a-card {
+    margin: 20px;
+  }
 
-.cover-photo {
-  position: fixed;
-  display: block;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  max-width: 100%;
-  max-height: 100%;
-  margin: auto;
-  overflow: auto;
-}
+  .a-card>img {
+    width: 100%;
+    max-height: 257px;
+    border-radius: 100%;
+  }
 
+  .a-card>div {
+    text-align: center;
+    font-family: 'Spinnaker', sans-serif;
+    font-size: 16px;
+    margin-top: 5px;
+  }
 
-/*photo slider*/
+  @media screen and (max-width: 1000px) {
+    .deckgrid[deckgrid]::before {
+      content: '2 .column.column-1-2';
+    }
+    .deckgrid {
+      margin: 100px auto;
+      padding: 10px;
+      width: 600px;
+    }
+  }
 
-.slider {
-  overflow: hidden;
-  max-width: 75%;
-  height: 50vw;
-  max-height: 600px;
-  position: relative;
-  border: 3px solid;
-  -webkit-border-image: url(../images/gold-texture.jpg) 30 round;
-  /* Safari 3.1-5 */
-  -o-border-image: url(../images/gold-texture.jpg) 30 round;
-  /* Opera 11-12.1 */
-  border-image: url(../images/gold-texture.jpg) 30 round;
-  margin-top: 15px;
-  margin-left: auto;
-  margin-right: auto;
-}
+  @media screen and (max-width: 620px) {
+    .deckgrid[deckgrid]::before {
+      content: '1 .column.column-1-1';
+    }
+    .deckgrid {
+      margin: 100px auto;
+      padding: 10px;
+      width: 300px;
+    }
+  }
 
-.slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  max-width: 100%;
-}
+  .clearfix:before, .clearfix:after {
+    content: " ";
+    display: table;
+  }
 
-.arrow {
-  position: absolute;
-  z-index: 1002;
-  display: block;
-  top: 50%;
-  margin-top: -35px;
-  width: 36px;
-  height: 71px;
-  outline: none;
-  cursor: pointer;
-  background: url(../images/blank.gif) no-repeat;
-}
+  .clearfix:after {
+    clear: both;
+  }
 
-.arrow.prev {
-  opacity: 0.2;
-  left: 20px;
-  background-image: url(../images/paddle_prev_999.png);
-  transition: 0.2s linear all;
-}
+  .footer {
+    text-align: center;
+    display: block;
+  }
 
-.arrow.next {
-  opacity: 0.2;
-  right: 20px;
-  background-image: url(../images/paddle_next_999.png);
-  transition: 0.2s linear all;
-}
+  .spacer {
+    width: 100%;
+    height: 100vh;
+  }
 
-.arrow.prev:hover {
-  opacity: 1;
-  background-image: url(../images/paddle_prev_fff.png);
-}
+  .cover-photo {
+    position: fixed;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    overflow: auto;
+  }
+  /*photo slider*/
 
-.arrow.next:hover {
-  opacity: 1;
-  background-image: url(../images/paddle_next_fff.png);
-}
+  .slider {
+    overflow: hidden;
+    max-width: 75%;
+    height: 50vw;
+    max-height: 600px;
+    position: relative;
+    border: 3px solid;
+    -webkit-border-image: url(../images/gold-texture.jpg) 30 round;
+    /* Safari 3.1-5 */
+    -o-border-image: url(../images/gold-texture.jpg) 30 round;
+    /* Opera 11-12.1 */
+    border-image: url(../images/gold-texture.jpg) 30 round;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+  }
 
-/*---------------------------------------------------------
+  .arrow {
+    position: absolute;
+    z-index: 1002;
+    display: block;
+    top: 50%;
+    margin-top: -35px;
+    width: 36px;
+    height: 71px;
+    outline: none;
+    cursor: pointer;
+    background: url(../images/blank.gif) no-repeat;
+  }
+
+  .arrow.prev {
+    opacity: 0.2;
+    left: 20px;
+    background-image: url(../images/paddle_prev_999.png);
+    transition: 0.2s linear all;
+  }
+
+  .arrow.next {
+    opacity: 0.2;
+    right: 20px;
+    background-image: url(../images/paddle_next_999.png);
+    transition: 0.2s linear all;
+  }
+
+  .arrow.prev:hover {
+    opacity: 1;
+    background-image: url(../images/paddle_prev_fff.png);
+  }
+
+  .arrow.next:hover {
+    opacity: 1;
+    background-image: url(../images/paddle_next_fff.png);
+  }
+  /*---------------------------------------------------------
 NAV
 ---------------------------------------------------------*/
 
-.navv {
-  text-align: center;
-  display: block;
-  position: absolute;
-  z-index: 1002;
-  left: 0;
-  bottom: -4px;
-  right: 0;
-  height: 48px;
-}
+  .navv {
+    text-align: center;
+    display: block;
+    position: absolute;
+    z-index: 1002;
+    left: 0;
+    bottom: -4px;
+    right: 0;
+    height: 48px;
+  }
 
-.nonDraggableImage {
-  -webkit-user-drag: none;
-}
+  .nonDraggableImage {
+    -webkit-user-drag: none;
+  }
 
-.navv .wrapper {
-  margin: 0 auto;
-  width: 100%;
-  padding: 1em 0 .8em;
-}
+  .navv .wrapper {
+    margin: 0 auto;
+    width: 100%;
+    padding: 1em 0 .8em;
+  }
 
-.navv ul {
-  margin: 0;
-  width: 100%;
-}
+  .navv ul {
+    margin: 0;
+    width: 100%;
+  }
 
-.navv .dot, .navv .dot a {
-  display: inline-block;
-  zoom: 1;
-}
+  .navv .dot, .navv .dot a {
+    display: inline-block;
+    zoom: 1;
+  }
 
-.dots .dot {
-  position: relative;
-  margin: 0 8px;
-  width: 12px;
-  height: 12px;
-}
+  .dots .dot {
+    position: relative;
+    margin: 0 8px;
+    width: 12px;
+    height: 12px;
+  }
 
-.dots .dot a {
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  width: 6px;
-  height: 6px;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  background: #fff;
-  border: 1px solid transparent;
-  outline: none;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  -webkit-transition: background-color 0.25s, border-color 0.25s;
-  -moz-transition: background-color 0.25s, border-color 0.25s;
-  transition: background-color 0.25s, border-color 0.25s;
-}
+  .dots .dot a {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 6px;
+    height: 6px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid transparent;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-transition: background-color 0.25s, border-color 0.25s;
+    -moz-transition: background-color 0.25s, border-color 0.25s;
+    transition: background-color 0.25s, border-color 0.25s;
+  }
 
-.dots .dot a.active {
-  border-color: #FFF;
-  background-color: transparent;
-}
+  .dots .dot a.active {
+    border-color: #FFF;
+    background-color: transparent;
+  }
 
-.fix-to-top {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 100;
-}
+  .fix-to-top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  }
 
-.body-section {
-  padding-top: 50px;
-  background-image: url(../images/bg_leaves.png);
-}
+  .body-section {
+    padding-top: 50px;
+    background-image: url(../images/bg_leaves.png);
+  }
 
-.body-section-simple {
-  padding-top: 50px;
-  background-image: url(../images/simple_bg_leaves.png);
-}
+  .body-section-simple {
+    padding-top: 50px;
+    background-image: url(../images/simple_bg_leaves.png);
+  }
 
-.body-section-top {
-  background-image: url(../images/bg_leaves.png);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-}
+  .gold-lines {}
 
-.navbar-default .navbar-nav>.active>a {
-  border-bottom: solid 2px rgba(24, 106, 59, 0.55);
-  padding-bottom: 3px;
-  background-color: #fff !important;
-}
+  .body-section-top {
+    background-image: url(../images/bg_leaves.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
 
-.space-holder {
-  height: 400px;
-}
+  .navbar-default .navbar-nav>.active>a {
+    border-bottom: solid 2px rgba(24, 106, 59, 0.55);
+    padding-bottom: 3px;
+    background-color: #fff !important;
+  }
 
-.marker-info {
-  color: rgba(24, 106, 59, 0.7) !important;
-  font-weight: bold;
-  padding-top: 15px;
-}
+  .space-holder {
+    height: 400px;
+  }
 
-.btn.focus, .btn:focus, .btn:hover {
-  color: #fff !important;
-  background-color: rgba(24, 106, 59, 0.7);
-  text-decoration: none;
-}
+  .marker-info {
+    color: rgba(24, 106, 59, 0.7) !important;
+    font-weight: bold;
+    padding-top: 15px;
+  }
 
-.width-400 {
-  width: 400px;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: 200px;
-}
+  .btn.focus, .btn:focus, .btn:hover {
+    color: #fff !important;
+    background-color: rgba(24, 106, 59, 0.7);
+    text-decoration: none;
+  }
 
-.width-700 {
-  width: 700px;
-  clear: both;
-  display: inline-block;
-}
+  .width-400 {
+    width: 400px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 200px;
+  }
 
-.width-100 {
-  width: 100px;
-  display: inline-block;
-}
+  .width-700 {
+    width: 700px;
+    clear: both;
+    display: inline-block;
+  }
 
-.add-icon {
-  font-size: 18px;
-  margin-right: 5px;
-}
+  .width-100 {
+    width: 100px;
+    display: inline-block;
+  }
 
-.remove-guest {
-  width: 22px;
-  height: 22px;
-  font-size: 22px;
-  margin-top: -5px;
-  line-height: 20px;
-  color: rgba(24, 106, 59, 0.7);
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-}
+  .add-icon {
+    font-size: 18px;
+    margin-right: 5px;
+  }
 
-.width-200 {
-  width: 200px;
-  display: inline-block;
-}
+  .remove-guest {
+    width: 22px;
+    height: 22px;
+    font-size: 22px;
+    margin-top: -5px;
+    line-height: 20px;
+    color: rgba(24, 106, 59, 0.7);
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 
-.margin-end-30 {
-  margin-left: 30px;
-}
+  .width-200 {
+    width: 200px;
+    display: inline-block;
+  }
 
-.height-20 {
-  height: 20px;
-}
+  .margin-end-30 {
+    margin-left: 30px;
+  }
 
-.rsvp-list {
-  list-style-type: none;
-  text-align: center;
-  padding: 0;
-}
+  .height-20 {
+    height: 20px;
+  }
 
-.center-section {
-  width: 100%;
-  margin: 0px auto;
-  max-width: 999px;
-  display: table;
-  text-align: center;
-}
+  .rsvp-list {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+  }
 
-.rsvp-dropdown {
-  height: 30px;
-  line-height: 30px;
-}
+  .center-section {
+    width: 100%;
+    margin: 0px auto;
+    max-width: 999px;
+    display: table;
+    text-align: center;
+  }
 
-.rsvp-dropdown>option {
-  padding: 5px;
-}
+  .rsvp-dropdown {
+    height: 30px;
+    line-height: 30px;
+  }
+
+  .rsvp-dropdown>option {
+    padding: 5px;
+  }
+  /*check animation*/
+
+  .checkmark {
+    width: 200px;
+    margin: 0 auto;
+    padding-top: 40px;
+  }
+
+  .path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 0;
+    animation: dash 2s ease-in-out;
+    -webkit-animation: dash 2s ease-in-out;
+  }
+
+  .spin {
+    animation: spin 2s;
+    -webkit-animation: spin 2s;
+    transform-origin: 50% 50%;
+    -webkit-transform-origin: 50% 50%;
+  }
+
+  p {
+    font-family: sans-serif;
+    color: pink;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 20px auto;
+    text-align: center;
+    animation: text .5s linear .4s;
+    -webkit-animation: text .4s linear .3s;
+  }
+
+  @-webkit-keyframes dash {
+    0% {
+      stroke-dashoffset: 1000;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes dash {
+    0% {
+      stroke-dashoffset: 1000;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @-webkit-keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+
+  @keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+
+  @-webkit-keyframes text {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+    @keyframes text {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  }
