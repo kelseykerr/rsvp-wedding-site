@@ -9,7 +9,7 @@
   }
 
   .navbar-default {
-    background-color: #F3F3F3 !important;
+    background-color: #FFFFFF !important;
     border-color: transparent !important;
   }
 
@@ -25,7 +25,7 @@
 
   .navbar-default .navbar-nav>li>a {
     font-family: 'Spinnaker', sans-serif;
-    color: rgba(24, 106, 59, 0.7) !important;
+    color: #080808 !important;
     font-size: 15px;
   }
 
@@ -33,6 +33,8 @@
     margin-left: auto;
     margin-right: auto;
     display: block;
+    padding-top: 25px;
+    padding-bottom: 25px;
     max-width: 100%;
   }
 
@@ -90,7 +92,7 @@
   #clockdiv div>span {
     padding: 0 10px;
     border-radius: 3px;
-    color: rgba(24, 106, 59, 0.7);
+    color: #080808;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text !important;
     background: url(../images/small_gold.jpg);
@@ -106,7 +108,7 @@
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text !important;
     background: url(../images/small_gold.jpg);
-    color: rgba(24, 106, 59, 0.7);
+    color: #080808;
   }
 
   .hotel-block {
@@ -132,15 +134,16 @@
     margin-right: 20px;
     margin-left: 20px;
     margin-bottom: 20px;
-    border-color: rgba(24, 106, 59, 0.7);
+    border-color: #080808;
   }
 
-  .green-text {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-size: 16px;
+  .received-text {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-size: 20px;
     font-family: 'Spinnaker', sans-serif;
-    color: rgba(24, 106, 59, 0.7);
+    color: #080808;
+    ;
   }
 
   .rsvp-received {
@@ -161,29 +164,31 @@
     padding-bottom: 15px;
     font-size: 20px;
     font-family: 'Spinnaker', sans-serif;
-    color: rgba(24, 106, 59, 0.7);
+    color: #080808;
   }
 
   .bigger-text {
     padding-top: 5px;
     font-size: 20px;
     font-family: 'Spinnaker', sans-serif;
-    color: rgba(24, 106, 59, 0.7);
+    color: #080808;
   }
 
   .wedding-text {
     font-size: 18px;
     margin-bottom: 20px;
-    color: rgba(24, 106, 59, 0.7);
+    color: #080808;
     font-family: 'Spinnaker', sans-serif;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text !important;
     background: url(../images/small_gold.jpg);
-    color: rgba(24, 106, 59, 0.7);
+    color: #080808;
   }
 
   .rsvp-section {
     font-family: 'Spinnaker', sans-serif;
+    min-height: 100vh;
+    background: url(../images/gold_splatter_corner_top_right.jpg) top right no-repeat, url(../images/gold_splatter_corner.jpg) bottom left no-repeat, white
   }
 
   .rsvpForm {
@@ -198,14 +203,14 @@
     padding-top: 5px;
     font-size: 12px;
     font-family: 'Spinnaker', sans-serif;
-    color: rgba(24, 106, 59, 0.7);
+    color: #080808;
   }
 
   .text {
     padding-top: 5px;
     font-size: 16px;
     font-family: 'Spinnaker', sans-serif;
-    color: rgba(24, 106, 59, 0.7);
+    color: #080808;
   }
 
   .hotel-img {
@@ -223,8 +228,8 @@
   }
 
   .btn {
-    color: rgba(24, 106, 59, 0.7);
-    border: 1px solid rgba(24, 106, 59, 0.7) !important;
+    color: #080808;
+    border: 1px solid #080808 !important;
   }
 
   .float-right {
@@ -263,7 +268,7 @@
 
   body {
     padding: 0;
-    background-color: #f3f3f3 !important;
+    background-color: #ffffff !important;
   }
   /* Everything but the jumbotron gets side spacing for mobile first views */
 
@@ -292,17 +297,17 @@
     color: #777;
     border-top: 1px solid #e5e5e5;
     margin-top: 20px;
-    position: absolute;
-    bottom: 0;
     width: 100%;
     height: 60px;
+    margin-top: -60px;
     /* Height of the footer */
   }
 
   .bottom-only {
+    color: #080808 !important;
     border: 0 !important;
-    background-color: #f3f3f3 !important;
-    border-bottom: 1px solid rgba(24, 106, 59, 0.7) !important;
+    background-color: #ffffff !important;
+    border-bottom: 1px solid #080808 !important;
     border-radius: 0px !important;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
@@ -358,13 +363,13 @@
   }
 
   .logo {
-    max-width: 870px;
+    max-width: 670px;
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    margin-bottom: 50px;
+    max-height: 670px;
+    height: 100%;
+    margin: auto;
     padding-top: 100px;
+    display: block;
   }
 
   .banner {
@@ -385,6 +390,18 @@
 
   .margin-bottom-20 {
     margin-bottom: 20px;
+  }
+
+  .margin-bottom-50 {
+    margin-bottom: 50px;
+  }
+
+  .margin-bottom-100 {
+    margin-bottom: 100px;
+  }
+
+  .padding-bottom-200 {
+    padding-bottom: 200px;
   }
 
   .deckgrid[deckgrid]::before {
@@ -440,6 +457,10 @@
     margin-top: 5px;
   }
 
+  .wedding-section {
+    margin-top: -20px;
+  }
+
   @media screen and (max-width: 1000px) {
     .deckgrid[deckgrid]::before {
       content: '2 .column.column-1-2';
@@ -451,6 +472,18 @@
     }
   }
 
+  @media screen and (max-width: 880px) {
+    .logo {
+      max-width: 370px;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    .width-700 {
+      width: 600px !important;
+    }
+  }
+
   @media screen and (max-width: 620px) {
     .deckgrid[deckgrid]::before {
       content: '1 .column.column-1-1';
@@ -459,6 +492,51 @@
       margin: 100px auto;
       padding: 10px;
       width: 300px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .width-700 {
+      width: 500px !important;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .width-700 {
+      width: 400px !important;
+    }
+  }
+
+  @media screen and (max-width: 420px) {
+    .body-section-top {
+      background: url(../images/gold_splatter_right.jpg) right repeat-y, white !important;
+    }
+    .body-section-simple {
+      background: url(../images/gold_splatter_right.jpg) right repeat-y, white !important;
+    }
+    .body-section {
+      background: url(../images/gold_splatter_right.jpg) right repeat-y, white !important;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    .width-700 {
+      width: 250px !important;
+    }
+    .width-400 {
+      width: 250px !important;
+    }
+  }
+
+  @media screen and (max-width: 399px) {
+    .rsvp-section {
+      background: url(../images/gold_splatter_corner.jpg) bottom left no-repeat, white
+    }
+  }
+
+  @media screen and (max-width: 300px) {
+    .width-700 {
+      width: 200px;
     }
   }
 
@@ -634,24 +712,25 @@ NAV
 
   .body-section {
     padding-top: 50px;
-    background-image: url(../images/bg_leaves.png);
+    /*background-image: url(../images/bg_leaves.png);*/
+    background: url(../images/gold_splatter_right.jpg) right repeat-y, url(../images/gold_splatter_left.jpg) left repeat-y, white
   }
 
   .body-section-simple {
     padding-top: 50px;
-    background-image: url(../images/simple_bg_leaves.png);
+    background: url(../images/gold_splatter_right.jpg) right repeat-y, url(../images/gold_splatter_left.jpg) left repeat-y, white
+    /*background-image: url(../images/simple_bg_leaves.png);*/
   }
 
   .gold-lines {}
 
   .body-section-top {
-    background-image: url(../images/bg_leaves.png);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
+    min-height: 100vh;
+    background: url(../images/gold_splatter_right.jpg) right no-repeat, url(../images/gold_splatter_left.jpg) left no-repeat, white
   }
 
   .navbar-default .navbar-nav>.active>a {
-    border-bottom: solid 2px rgba(24, 106, 59, 0.55);
+    border-bottom: solid 2px #080808;
     padding-bottom: 3px;
     background-color: #fff !important;
   }
@@ -661,14 +740,14 @@ NAV
   }
 
   .marker-info {
-    color: rgba(24, 106, 59, 0.7) !important;
+    color: #080808 !important;
     font-weight: bold;
     padding-top: 15px;
   }
 
   .btn.focus, .btn:focus, .btn:hover {
     color: #fff !important;
-    background-color: rgba(24, 106, 59, 0.7);
+    background-color: #080808;
     text-decoration: none;
   }
 
@@ -699,13 +778,18 @@ NAV
     margin-right: 5px;
   }
 
+  .form-control {
+    color: #080808 !important;
+  }
+
   .remove-guest {
     width: 22px;
     height: 22px;
     font-size: 22px;
     margin-top: -5px;
     line-height: 20px;
-    color: rgba(24, 106, 59, 0.7);
+    /*color: rgba(24, 106, 59, 0.7);*/
+    color: #080808;
     cursor: pointer;
     display: inline-block;
     position: relative;
@@ -769,17 +853,15 @@ NAV
     transform-origin: 50% 50%;
     -webkit-transform-origin: 50% 50%;
   }
-
-  p {
+  /*p {
     font-family: sans-serif;
-    color: pink;
     font-size: 30px;
     font-weight: bold;
     margin: 20px auto;
     text-align: center;
     animation: text .5s linear .4s;
     -webkit-animation: text .4s linear .3s;
-  }
+  }*/
 
   @-webkit-keyframes dash {
     0% {
@@ -832,4 +914,9 @@ NAV
         opacity: 1;
       }
     }
+  }
+
+  .text-danger {
+    font-size: 12px;
+    color: #E55451 !important;
   }

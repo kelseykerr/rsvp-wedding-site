@@ -3,7 +3,7 @@
 angular.module('kevKelseyWedApp')
   .factory('RsvpService', ['$http', function($http) {
 
-    var baseUrl = "http://localhost:8080/api";
+    var baseUrl = "http://ec2-54-152-149-104.compute-1.amazonaws.com/api";
     return {
       authenticate: function(username, password) {
         var authObj = {

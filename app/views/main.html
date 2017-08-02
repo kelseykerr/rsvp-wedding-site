@@ -6,8 +6,7 @@
           <div class="container">
             <div class="navbar-header">
 
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                      data-target="#js-navbar-collapse">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -24,21 +23,20 @@
                 <li du-scrollspy="wedding"><a href="#wedding" du-smooth-scroll>WEDDING</a></li>
                 <li du-scrollspy="accommodations"><a href="#accommodations" du-smooth-scroll>ACCOMMODATIONS</a></li>
                 <li du-scrollspy="registry"><a href="#registry" du-smooth-scroll>REGISTRY</a></li>
-                <li du-scrollspy="rsvp"><a href="#rsvp" du-smooth-scroll>RSVP</a></li>
+                <li du-scrollspy="rsvp"><a href="/#!rsvp" du-smooth-scroll>RSVP</a></li>
               </ul>
             </div>
           </div>
         </div>
       </div>
-      <img src="/images/std_green_rect.png" alt="" class="logo">
+      <img src="/images/kev_kels_header.png" alt="" class="logo">
     </div>
   </section>
   <section id="people" class="body-section-simple">
 
-    <img class="center-img" src="/images/bride_and_groom.png">
+    <img class="center-img" src="/images/bride_groom.png">
     <div class="container slider">
-      <img ng-repeat="slide in main.engagementPhotos" class="slide slide-animation"
-           ng-hide="!main.isCurrentSlideIndex($index)" ng-src="{{slide.image}}">
+      <img ng-repeat="slide in main.engagementPhotos" class="slide slide-animation" ng-hide="!main.isCurrentSlideIndex($index)" ng-src="{{slide.image}}">
 
       <a class="arrow prev" href="" ng-click="main.prevSlide()"></a>
       <a class="arrow next" href="" ng-click="main.nextSlide()"></a>
@@ -47,18 +45,18 @@
         <div class="wrapper">
           <ul class="dots">
             <li class="dot" ng-repeat="slide in main.engagementPhotos">
-              <a href="#" ng-class="{'active':main.isCurrentSlideIndex($index)}"
-                 ng-click="main.setCurrentSlideIndex($index);"></a></li>
+              <a href="#" ng-class="{'active':main.isCurrentSlideIndex($index)}" ng-click="main.setCurrentSlideIndex($index);"></a>
+            </li>
           </ul>
         </div>
       </nav>
     </div>
-    <img class="center-img margin-top-25" src="/images/bridal_party.png">
+    <img class="center-img margin-top-25" src="/images/bridesquad.png">
     <div deckgrid source="main.bridalParty" cardTemplate="views/person-card.html" class="deckgrid clearfix"></div>
 
   </section>
-  <section id="wedding" class="center-content body-section">
-    <img class="center-img" src="/images/the_wedding.png">
+  <section id="wedding" class="center-content body-section wedding-section">
+    <img class="center-img" src="/images/wedding.png">
     <div class="wedding-text">
       October 14th, 2017 at the DAR
     </div>
@@ -75,299 +73,294 @@
         <span class="minutes"></span>
         <div class="smalltext">MINUTES</div>
       </div>
-      <div>
-        <span class="seconds"></span>
-        <div class="smalltext">SECONDS</div>
-      </div>
     </div>
     <div id="map"></div>
     <script>
       function initMap() {
-    var styledMapType = new google.maps.StyledMapType(
-        [{
+        var styledMapType = new google.maps.StyledMapType(
+          [{
             "featureType": "administrative.neighborhood",
             "elementType": "geometry.stroke",
             "stylers": [{
-                "color": "#d3d3d3"
+              "color": "#d3d3d3"
             }]
-        }, {
+          }, {
             "featureType": "administrative.land_parcel",
             "elementType": "geometry.stroke",
             "stylers": [{
-                "visibility": "on"
+              "visibility": "on"
             }, {
-                "color": "#d6d6d6"
+              "color": "#d6d6d6"
             }]
-        }, {
+          }, {
             "featureType": "landscape",
             "elementType": "geometry.stroke",
             "stylers": [{
-                "color": "#d4d4d4"
+              "color": "#d4d4d4"
             }]
-        }, {
+          }, {
             "featureType": "landscape.man_made",
             "elementType": "geometry.stroke",
             "stylers": [{
-                "visibility": "on"
+              "visibility": "on"
             }, {
-                "color": "#b9b8b8"
+              "color": "#b9b8b8"
             }]
-        }, {
+          }, {
             "featureType": "poi",
             "elementType": "all",
             "stylers": [{
-                "visibility": "on"
+              "visibility": "on"
             }]
-        }, {
+          }, {
             "featureType": "poi.attraction",
             "elementType": "all",
             "stylers": [{
-                "visibility": "simplified"
+              "visibility": "simplified"
             }]
-        }, {
+          }, {
             "featureType": "poi.attraction",
             "elementType": "labels",
             "stylers": [{
-                "visibility": "on"
+              "visibility": "on"
             }]
-        }, {
+          }, {
             "featureType": "poi.attraction",
             "elementType": "labels.text",
             "stylers": [{
-                "visibility": "on"
+              "visibility": "on"
             }]
-        }, {
+          }, {
             "featureType": "poi.attraction",
             "elementType": "labels.icon",
             "stylers": [{
-                "visibility": "on"
+              "visibility": "on"
             }]
-        }, {
+          }, {
             "featureType": "poi.business",
             "elementType": "geometry",
             "stylers": [{
-                "visibility": "on"
+              "visibility": "on"
             }]
-        }, {
+          }, {
             "featureType": "poi.business",
             "elementType": "labels.text",
             "stylers": [{
-                "visibility": "on"
+              "visibility": "on"
             }]
-        }, {
+          }, {
             "featureType": "poi.business",
             "elementType": "labels.icon",
             "stylers": [{
-                "visibility": "on"
+              "visibility": "on"
             }]
-        }, {
+          }, {
             "featureType": "poi.government",
             "elementType": "labels",
             "stylers": [{
-                "visibility": "on"
+              "visibility": "on"
             }]
-        }, {
+          }, {
             "featureType": "poi.government",
             "elementType": "labels.text",
             "stylers": [{
-                "visibility": "on"
+              "visibility": "on"
             }]
-        }, {
+          }, {
             "featureType": "poi.government",
             "elementType": "labels.icon",
             "stylers": [{
-                "visibility": "on"
+              "visibility": "on"
             }]
-        }, {
+          }, {
             "featureType": "poi.medical",
             "elementType": "labels.icon",
             "stylers": [{
-                "visibility": "off"
+              "visibility": "off"
             }]
-        }, {
+          }, {
             "featureType": "poi.park",
             "elementType": "labels",
             "stylers": [{
-                "visibility": "on"
+              "visibility": "on"
             }]
-        }, {
+          }, {
             "featureType": "poi.park",
             "elementType": "labels.icon",
             "stylers": [{
-                "visibility": "on"
+              "visibility": "on"
             }]
-        }, {
+          }, {
             "featureType": "poi.school",
             "elementType": "labels",
             "stylers": [{
-                "visibility": "on"
+              "visibility": "on"
             }]
-        }, {
+          }, {
             "featureType": "poi.sports_complex",
             "elementType": "labels",
             "stylers": [{
-                "visibility": "on"
+              "visibility": "on"
             }]
-        }, {
+          }, {
             "featureType": "poi.sports_complex",
             "elementType": "labels.icon",
             "stylers": [{
-                "visibility": "on"
+              "visibility": "on"
             }]
-        }, {
+          }, {
             "featureType": "road",
             "elementType": "geometry",
             "stylers": [{
-                "color": "#cccccc"
+              "color": "#cccccc"
             }]
-        }, {
+          }, {
             "featureType": "road",
             "elementType": "labels",
             "stylers": [{
-                "visibility": "on"
+              "visibility": "on"
             }]
-        }, {
+          }, {
             "featureType": "road",
             "elementType": "labels.text",
             "stylers": [{
-                "visibility": "on"
+              "visibility": "on"
             }, {
-                "weight": "2.51"
+              "weight": "2.51"
             }, {
-                "gamma": "1.42"
+              "gamma": "1.42"
             }]
-        }, {
+          }, {
             "featureType": "transit",
             "elementType": "labels",
             "stylers": [{
-                "visibility": "on"
+              "visibility": "on"
             }]
-        }, {
+          }, {
             "featureType": "transit",
             "elementType": "labels.text",
             "stylers": [{
-                "visibility": "on"
+              "visibility": "on"
             }]
-        }]
-    );
-    var DAR = {
-        lat: 38.893749,
-        lng: -77.039947
-    };
+          }]
+        );
+        var DAR = {
+          lat: 38.893749,
+          lng: -77.039947
+        };
 
-    var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 14,
-        center: {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 14,
+          center: {
             lat: 38.9,
             lng: -77.039947
-        },
-        scrollwheel: false,
-        mapTypeControlOptions: {
+          },
+          scrollwheel: false,
+          mapTypeControlOptions: {
             mapTypeIds: ['roadmap', 'satellite', 'hybrid', 'terrain',
-                'styled_map'
+              'styled_map'
             ]
-        }
-    });
-    map.mapTypes.set('styled_map', styledMapType);
-    map.setMapTypeId('styled_map');
+          }
+        });
+        map.mapTypes.set('styled_map', styledMapType);
+        map.setMapTypeId('styled_map');
 
-    var venueMarker = new google.maps.Marker({
-        position: DAR,
-        map: map,
-        title: 'Ceremony/Reception Venue'
-    });
+        var venueMarker = new google.maps.Marker({
+          position: DAR,
+          map: map,
+          title: 'Ceremony/Reception Venue'
+        });
 
-    var hyattMarker = new google.maps.Marker({
-        position: {
+        var hyattMarker = new google.maps.Marker({
+          position: {
             lat: 38.9053547,
             lng: -77.0503515
-        },
-        map: map,
-        title: 'Hyatt Place'
-    });
+          },
+          map: map,
+          title: 'Hyatt Place'
+        });
 
-    var mcMarker = new google.maps.Marker({
-        position: {
+        var mcMarker = new google.maps.Marker({
+          position: {
             lat: 38.9043845,
             lng: -77.0289292
-        },
-        map: map,
-        title: 'Morrison-Clark'
-    });
+          },
+          map: map,
+          title: 'Morrison-Clark'
+        });
 
-    var hyattInfo = '<div class="marker-info"> <div> Hyatt Place </div><p>$159/night </p><a href="http://washingtondcgeorgetown.place.hyatt.com/en/hotel/home.html?corp_id=g-kerr" class="btn">book</a> </div>';
-    var mcInfo = '<div class="marker-info"> <div> Morrison-Clark </div><p>$179/night </p><a href="http://www.morrisonclark.com/" class="btn">visit website</a> </div>';
-    var darInfo = '<div class="marker-info"> <div> DAR National Headquarters </div><p>Ceremony & Reception Location </p> </div>';
+        var hyattInfo = '<div class="marker-info"> <div> Hyatt Place </div><p>$159/night </p><a href="http://washingtondcgeorgetown.place.hyatt.com/en/hotel/home.html?corp_id=g-kerr" class="btn">book</a> </div>';
+        var mcInfo = '<div class="marker-info"> <div> Morrison-Clark </div><p>$179/night </p><a href="http://www.morrisonclark.com/" class="btn">visit website</a> </div>';
+        var darInfo = '<div class="marker-info"> <div> DAR National Headquarters </div><p>Ceremony & Reception Location </p> </div>';
 
-    var hyattInfoWindow = new google.maps.InfoWindow({
+        var hyattInfoWindow = new google.maps.InfoWindow({
           content: hyattInfo
         });
 
-    var mcInfoWindow = new google.maps.InfoWindow({content: mcInfo});
-    var darInfoWindow = new google.maps.InfoWindow({content: darInfo});
+        var mcInfoWindow = new google.maps.InfoWindow({
+          content: mcInfo
+        });
+        var darInfoWindow = new google.maps.InfoWindow({
+          content: darInfo
+        });
 
-    hyattMarker.addListener('click', function() {
-      hyattInfoWindow.open(map, hyattMarker);
-    });
+        hyattMarker.addListener('click', function() {
+          hyattInfoWindow.open(map, hyattMarker);
+        });
 
-    mcMarker.addListener('click', function() {
-      mcInfoWindow.open(map, mcMarker);
-    });
+        mcMarker.addListener('click', function() {
+          mcInfoWindow.open(map, mcMarker);
+        });
 
-    venueMarker.addListener('click', function() {
-      darInfoWindow.open(map, venueMarker);
-    });
-}
-
+        venueMarker.addListener('click', function() {
+          darInfoWindow.open(map, venueMarker);
+        });
+      }
     </script>
-    <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQPUORC-gczmXKyfW1fpBgAvKK4iOIaJs&callback=initMap">
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQPUORC-gczmXKyfW1fpBgAvKK4iOIaJs&callback=initMap">
     </script>
   </section>
-  <section id="accommodations" class="body-section">
-    <img class="center-img" src="/images/accommodations.png">
+  <section class="body-section">
+    <div id="accommodations" class="margin-bottom-50">
+      <img class="center-img" src="/images/accommodations2.png">
 
-    <div class="hotel-block">
-      <div>
-        <img class="hotel-img" src="../images/morrison-clark.jpg">
-        <div class="bigger-text">Morrison Clark</div>
-        <div class="text">1011 L Street NW</div>
-        <div class="text">Located Downtown</div>
-        <div class="small-text">To book, call (202) 898-1200 and mention the Hummel/Kerr Wedding Block</div>
-        <a class="btn" href="http://www.morrisonclark.com/">visit website</a>
-      </div>
-
-      <div>
-        <img class="hotel-img" src="../images/hyatt.jpg">
-        <div class="bigger-text">Hyatt Place</div>
-        <div class="text">2121 M St. NW</div>
-        <div class="text">Located in Georgetown/West End</div>
-        <div class="small-text">To book, click the link below or call 800-992-0698 and mention "Kerr-Hummel Wedding"
+      <div class="hotel-block">
+        <div>
+          <img class="hotel-img" src="../images/morrison-clark.jpg">
+          <div class="bigger-text">Morrison Clark</div>
+          <div class="text">1011 L Street NW</div>
+          <div class="text">Located Downtown</div>
+          <div class="small-text">To book, call (202) 898-1200 and mention the Hummel/Kerr Wedding Block</div>
+          <a class="btn" href="http://www.morrisonclark.com/">visit website</a>
         </div>
-        <a href="http://washingtondcgeorgetown.place.hyatt.com/en/hotel/home.html?corp_id=g-kerr" class="btn">book</a>
+
+        <div>
+          <img class="hotel-img" src="../images/hyatt.jpg">
+          <div class="bigger-text">Hyatt Place</div>
+          <div class="text">2121 M St. NW</div>
+          <div class="text">Located in Georgetown/West End</div>
+          <div class="small-text">To book, click the link below or call 800-992-0698 and mention "Kerr-Hummel Wedding"
+          </div>
+          <a href="http://washingtondcgeorgetown.place.hyatt.com/en/hotel/home.html?corp_id=g-kerr" class="btn">book</a>
+        </div>
       </div>
+
     </div>
 
-  </section>
-  <section id="registry" class="body-section-simple">
-    <img class="center-img" src="/images/registry.png">
-    <div class="small-text center-content margin-bottom-20">**You don't have to get us anything. You really don't.**</div>
-    <div class="hotel-block">
-      <div>
-        <a href="https://www.zola.com/registry/kevinandkelseywedding">
-          <img class="registry-img" src="../images/zola-logo-black.jpg">
-        </a>
-      </div>
-      <div>
-        <a href="https://www.amazon.com/wedding/share/kevinandkelsey">
-          <img class="registry-img" src="../images/amazon_wr_logo.png">
-        </a>
+    <div id="registry" class="padding-bottom-200 margin-top-25">
+      <img class="center-img" src="/images/registry2.png">
+      <div class="hotel-block">
+        <div>
+          <a href="https://www.zola.com/registry/kevinandkelseywedding">
+            <img class="registry-img" src="../images/zola-logo-black.jpg">
+          </a>
+        </div>
+        <div>
+          <a href="https://www.amazon.com/wedding/share/kevinandkelsey">
+            <img class="registry-img" src="../images/amazon_wr_logo.png">
+          </a>
+        </div>
       </div>
     </div>
-  </section>
-  <section id="rsvp" class="body-section">
-    <img class="center-img" src="/images/rsvp.png">
-    <div class="section-header space-holder">This site is a work in progress...check back soon for updates!</div>
-    <div class="space-holder"></div>
   </section>
 </div>

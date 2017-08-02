@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('kevKelseyWedApp')
-  .controller('RsvpCtrl', function($scope, RsvpService) {
+  .controller('RsvpCtrl', function($scope, RsvpService, $location) {
 
     $scope.rsvp = {
       showLogin: false,
@@ -10,6 +10,8 @@ angular.module('kevKelseyWedApp')
 
       username: '',
 
+      error: '',
+
       password: '',
 
       invitation: {},
@@ -17,12 +19,19 @@ angular.module('kevKelseyWedApp')
       additionalGuests: [],
 
       doLogin: function() {
+        if ($scope.rsvp.username == null || $scope.rsvp.username.length == 0 ||
+          $scope.rsvp.password == null || $scope.rsvp.password.length == 0) {
+          return;
+        }
         RsvpService.authenticate($scope.rsvp.username, $scope.rsvp.password)
           .then(function(resp) {
-            console.log(resp.data.token);
             localStorage.setItem('rsvp.token', resp.data.token);
             $scope.rsvp.showLogin = false;
             $scope.rsvp.getInvite();
+            $scope.rsvp.error = '';
+          }, function(error) {
+            console.log('error');
+            $scope.rsvp.error = "invalid login credentials";
           });
       },
 
@@ -45,9 +54,7 @@ angular.module('kevKelseyWedApp')
       },
 
       submitRsvp: function() {
-        console.log($scope.rsvp.invitation);
         for (var i = 0; i < $scope.rsvp.additionalGuests.length; i++) {
-          console.log($scope.rsvp.additionalGuests[i]);
           $scope.rsvp.invitation.guests.push($scope.rsvp.additionalGuests[i]);
         }
         for (var i = 0; i < $scope.rsvp.invitation.guests.length; i++) {
@@ -92,9 +99,17 @@ angular.module('kevKelseyWedApp')
             }
           }
         }, function(error) {
-          console.log(error);
           if (error.status == 401) {
             $scope.rsvp.showLogin = true;
+            $scope.rsvp.showLogin = true;
+            if ($location.search().username != null) {
+              $scope.rsvp.username = $location.search().username;
+              $location.search('username', null);
+            }
+            if ($location.search().password != null) {
+              $scope.rsvp.password = $location.search().password;
+              $location.search('password', null);
+            }
           }
         });
       },
@@ -107,6 +122,14 @@ angular.module('kevKelseyWedApp')
         var token = localStorage.getItem('rsvp.token');
         if (token === undefined || token === null) {
           $scope.rsvp.showLogin = true;
+          if ($location.search().username != null) {
+            $scope.rsvp.username = $location.search().username;
+            $location.search('username', null);
+          }
+          if ($location.search().password != null) {
+            $scope.rsvp.password = $location.search().password;
+            $location.search('password', null);
+          }
         } else {
           $scope.rsvp.getInvite();
         }
