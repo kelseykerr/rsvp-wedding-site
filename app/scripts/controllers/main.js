@@ -33,11 +33,14 @@ angular.module('kevKelseyWedApp')
         'src': '/images/jill.png',
         'title': 'Jill'
       }, {
-        'src': '/images/sam.jpg',
-        'title': 'Sam'
+        'src': '/images/tomo.png',
+        'title': 'Tomo'
       }, {
         'src': '/images/therese.jpg',
         'title': 'Therese'
+      }, {
+        'src': '/images/sam.jpg',
+        'title': 'Sam'
       }],
 
       engagementPhotos: [{
